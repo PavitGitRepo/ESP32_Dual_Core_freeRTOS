@@ -1,55 +1,26 @@
-# Prerequisites
-*.d
-
-# Object files
-*.o
-*.ko
-*.obj
+# --- Arduino IDE Build Artifacts ---
+# Exclude the temporary directory where Arduino IDE compiles your ESP32 binary files
+/build/
+build/
+*.tmp
+*.bak
 *.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
+*.bin
 *.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# --- Sensitive Data & Credentials ---
+# Always ignore files containing your Wi-Fi credentials or private API keys
+secrets.h
+config_private.h
+.env
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# --- Arduino IDE 2.x & VS Code Metadata ---
+# Exclude local editor settings, workspace configurations, and search caches
+.vscode/
+.arduinoIDE/
+.local/
 
-# debug information files
-*.dwo
+# --- Operating System Files ---
+# Ignore system-specific metadata files
+.DS_Store
+Thumbs.db
